@@ -1,14 +1,15 @@
 body {
-   background-image: url(img/fondo-plantilla-diseno-musica-disco-vinilo-estilo-retro-vintage-disco-vinilo_689427-472.avif);
-
-   background-repeat: no-repeat;
-
-   background-size: cover;
+    background-image: url(img/fondo-plantilla-diseno-musica-disco-vinilo-estilo-retro-vintage-disco-vinilo_689427-472.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
 
 }
 .margen{background-color: black;
     color: yellow;
     height: 100px;
+    width: 100%;
 }
 
 h1{
@@ -20,7 +21,10 @@ h1{
 }
 
 footer{
-    text-align: center;
-    padding: 10px 0;
+    padding: 10px;
+    width: 100%;
 }
 
+.derecha{
+    float: right
+}
