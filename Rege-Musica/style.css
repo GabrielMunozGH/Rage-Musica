@@ -6,3 +6,21 @@ body {
    background-size: cover;
 
 }
+.margen{background-color: black;
+    color: yellow;
+    height: 100px;
+}
+
+h1{
+    text-align:center;
+    color: rgb(253, 239, 113);
+    font-family: Times;
+    font-size: 150px;
+    margin: 0
+}
+
+footer{
+    text-align: center;
+    padding: 10px 0;
+}
+
