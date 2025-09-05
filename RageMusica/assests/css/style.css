@@ -1,0 +1,171 @@
+body {
+    background-image: url('../img/fondo-plantilla-diseno-musica-disco-vinilo-estilo-retro-vintage-disco-vinilo_689427-472.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+}
+
+
+.margen {
+  background-color: black;
+  color: yellow;
+  width: 100%;
+  height: 120px; /* altura suficiente para 2 filas */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  grid-template-rows: 1fr 1fr;    /* 2 filas iguales */
+  gap: 10px; /* espacio entre los cuadros */
+}
+
+.margen > div {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+}
+
+
+h1{
+    text-align:center !important; 
+    color: rgb(253, 239, 113) !important;
+    font-family: Times !important;
+    font-size: 120px !important;
+    margin-top: 100px !important
+}
+
+footer{
+    padding: 10px;
+    width: 100%;
+}
+
+.derecha{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+.btn-secondary {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: yellow !important;
+  border: none !important; /* ocupa todo el ancho del grupo */
+}
+
+.btn-secondary:hover {
+  background-color: rgba(47, 48, 0, 0.8) !important;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  justify-content: flex-start;
+  transition: transform 0.6s ease;
+  margin-left: 5px;
+  margin-top: 10px;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: rotate(360deg);
+}
+
+
+.logo-text {
+  font-size: 24px;
+  position: relative;
+  top: -10px
+}
+
+.buscar{
+  background-color: transparent;
+  color: yellow ;
+  border: 2px solid rgba(255, 255, 0, 0.582);
+  border-radius: 15px
+}
+
+.buscar:hover{
+  background-color: rgba(47, 48, 0, 0.8) !important;
+}
+
+input{
+  background-color: transparent;
+  color: yellow ;
+  border: 2px solid rgba(255, 255, 0, 0.582);
+  border-radius: 15px
+}
+
+.contenedor-superpuesto {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.disco {
+  width: 300px; /* o el tamaño que prefieras */
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.disco:hover {
+  transform: rotate(360deg);
+}
+
+.delante {
+  position: absolute;
+  top: 0;
+  left: -450px;
+  z-index: 2;
+}
+
+.detras {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  z-index: 1;
+  border: 2px solid rgba(221, 221, 1, 0.799);
+  border-radius: 15px;
+  transition: background-image 1s ease-in-out
+}
+
+.imagen_rotativa{
+  width: auto;
+  height: 300px;
+}
+
+.centrar{
+  display: block;
+  text-align: center;
+}
+
+h3{
+  color: rgb(247, 227, 45) !important;
+  font-family: Times !important;
+  font-size: 30px !important;
+}
+
+.cuerpo{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  gap: 10px;
+  height: 50vw;
+  margin-top: 3vw;
+}
+
+.close{
+  position: absolute !important;
+  right: 50px !important;
+  border: 0 !important;
+  font-size: 2rem !important; 
+  background: transparent !important;
+
+}
+
+.close:hover{
+  background-color: rgba(235, 235, 235, 0.649) !important
+}
+
+hr{
+  height: 6px;
+  background-color: #000000;
+}
