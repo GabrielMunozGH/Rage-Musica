@@ -1,92 +1,141 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ES">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RageMusica</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assests/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheetare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+    <header>
+      <div class="margen">
+        <div>
+          <img src="assests/img/disco.webp" alt="Logo" class="logo" onclick="window.location.href=' index.html ';" >
+          <span class="logo-text">RageMusic</span>
+        </div>
+      
+        <!-- Seccion 2/ Usuarios -->
+        <div class="derecha">
+          <div class="justify-content-end">
+            <div class="btn-group" role="group">
+              <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Usuario
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="#" onclick="abrirModal('login')">Iniciar Sesión</a>
+                <a class="dropdown-item" href="#" onclick="abrirModal('registro')">Registrarse</a>
+              </div>
+            </div>
+          </div>
 
-<header>
-  <h1 class="titulo-principal">Rage</h1>
-  <button id="btn-menu" aria-label="Mostrar menú">&#9776;</button>
+          <div class="modal fade" id="usuarioModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+              
+                <div class="modal-header text-right">
+                  <h5 class="modal-title" id="modalTitulo"></h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
 
-  <nav>
-    <ul class="menu-principal">
-      <li><a href="#novedades-section">Novedades</a></li>
-      <li><a href="#cds-section">CDs</a></li>
-      <li><a href="#cassettes-section">Cassettes</a></li>
-      <li><a href="#vinilos-section">Vinilos</a></li>
-    </ul>
-  </nav>
+                <div class="modal-body" id="modalContenido">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Seccion 2/ Usuarios -->
 
-  <div class="filtros-header">
-    <form id="form-buscar" role="search">
-      <input type="search" placeholder="Buscar" aria-label="Buscar" id="input-buscar" />
-      <button type="submit" aria-label="Buscar">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M10 2a8 8 0 105.292 14.292l4.707 4.707 1.414-1.414-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
-        </svg>
-      </button>
-    </form>
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
 
-    <select id="selector-genero" aria-label="Filtrar por género">
-      <option value="">Todos los géneros</option>
-      <option value="rock">Rock</option>
-      <option value="pop">Pop</option>
-      <option value="jazz">Jazz</option>
-      <option value="electro">Electrónica</option>
-      <option value="metal">Metal</option>
-    </select>
+          <button type="button" class="btn btn-secondary" onclick="window.location.href=' index.html ';">
+            Home
+          </button>
 
-    <a href="#carrito" class="btn-carrito" aria-label="Ir al carrito de compras">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon-carrito">
-        <path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-12-2h14v-2h-14v2zm1-4h12l1.25-5h-14.5l1.25 5z"/>
-      </svg>
-      <span>Carrito</span>
-    </a>
-  </div>
-</header>
-
-<main class="container">
-
-  <section id="novedades-section" class="seccion-clara">
-    <h2>Novedades</h2>
-    <p>Los últimos lanzamientos y novedades en RageMusica.</p>
-  </section>
+          <!-- "boton desplegable"# -->
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blog
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <a class="dropdown-item" href=" html\noticias.html ">Noticias</a>
+              <a class="dropdown-item" href="#">Futuras Novedades</a>
+            </div>
+          </div>
+          <!-- "boton desplegable"# -->
 
 
-  <section id="cds-section" class="seccion-clara">
-    <h2>CDs</h2>
-    <p>Descubre nuestra amplia colección de CDs.</p>
-  </section>
+          <!-- "boton desplegable"# -->
+          <button type="button" class="btn btn-secondary" onclick="window.location.href=' html/nosotros.html ';">Nosotros</button>
+          <button type="button" class="btn btn-secondary">Contacto</button>
 
-  <section id="cassettes-section" class="seccion-clara">
-    <h2>Cassettes</h2>
-    <p>Para los nostálgicos, una variedad de cassettes clásicos.</p>
-  </section>
+          <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Productos
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+              <a class="dropdown-item" href="html/productos/vinilos.html">Vinilos</a>
+              <a class="dropdown-item" href="html/productos/cds.html">CDs</a>
+            </div>
+          </div>  
+        </div>
+        <!-- "boton desplegable"# -->
 
-  <section id="vinilos-section" class="seccion-clara">
-    <h2>Vinilos</h2>
-    <p>Disfruta del sonido vintage con nuestros vinilos exclusivos.</p>
-  </section>
-</main>
+        <div class="derecha">
+          <input type="text" placeholder="Escribe algo aquí">
+          <button class="buscar" >
+            🔍
+          </button>
+       </div>
+      </div>
+    </header>
+    
+    <hr class="dropdown-divider">
+    
 
-<footer>
-  <section>
-    <h3>Contacto</h3>
-    <p>Email: contacto@ragemusica.com</p>
-    <p>Teléfono: +54 11 1234 5678</p>
-  </section>
+    <div class="cuerpo">
+      <div>
+        <h1> RageMusic </h1>
+      </div>
 
-  <section class="footer-derecha">
-    <p class="texto-mas-info">Más información</p>
-    <a href="#quienes-somos" class="btn-quienes-somos">Quiénes somos</a>
-  </section>
-</footer>
+      <div>
+        <h3 class="centrar"> Discos más Recientes</h3>
+        <div class="contenedor-superpuesto"> 
+          <img src="assests/img/disco_1.webp" alt="Disco_1" class="detras imagen_rotativa">
+          <img src="assests/img/disco.webp" alt="Disco" class="disco delante">
+        </div>
+      </div>
+    </div>
 
-<script src="main.js"></script>
+    <hr>
+
+
+
+    <p>jhkjfdhs</p>
+
+
+
+
+    <footer class="margen">
+      <div>
+        <p> Contacto:
+         Email: contacto@ragemusica.com 
+        </p>
+      </div>
+    </footer>
+
+        
+
+    
 </body>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+  <script src="assests/js/script.js"> </script>   
+
+
 </html>
