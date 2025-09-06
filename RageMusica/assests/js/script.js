@@ -1,9 +1,9 @@
 function cambioImagen() {
   let index = 0;
   const fondos = [
-    "img/disco_1.jpg",
-    "img/disco 2.jpg",
-    "img/disco 3.jpg"
+    "assests/img/disco_1.webp",
+    "assests/img/disco 2.webp", 
+    "assests/img/disco 3.webp"
   ];
 
   const fondoElemento = document.querySelector(".detras");
